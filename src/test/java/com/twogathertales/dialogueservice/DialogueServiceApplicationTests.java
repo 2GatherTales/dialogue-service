@@ -1,4 +1,4 @@
-package com.gathertales.dialogueservice;
+package com.twogathertales.dialogueservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

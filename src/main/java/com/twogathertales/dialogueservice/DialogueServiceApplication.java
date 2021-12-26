@@ -1,4 +1,4 @@
-package com.gathertales.dialogueservice;
+package com.twogathertales.dialogueservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
