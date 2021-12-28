@@ -1,7 +1,7 @@
 package com.twogathertales.dialogueservice.model.display;
 
-import com.twogathertales.dialogueservice.model.chapter.Chapter;
 import com.twogathertales.dialogueservice.model.character.Character;
+import com.twogathertales.dialogueservice.model.event.Event;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
@@ -17,8 +17,8 @@ public class Display {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name="chapter_id", nullable = false)
-    private Chapter chapter;
+    @JoinColumn(name="event_id", nullable = false)
+    private Event event;
 
     @OneToOne
     @JoinColumn(name = "character_id", nullable = false)
