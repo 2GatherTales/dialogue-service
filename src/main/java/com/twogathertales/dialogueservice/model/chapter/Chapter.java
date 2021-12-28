@@ -17,8 +17,5 @@ public class Chapter {
     private long id;
 
     @OneToMany(mappedBy = "chapter")
-    private Set<Display> displays;
-
-    @OneToMany(mappedBy = "chapter")
     private Set<Event> events;
 }

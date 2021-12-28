@@ -2,6 +2,7 @@ package com.twogathertales.dialogueservice.model.event;
 
 import com.twogathertales.dialogueservice.model.chapter.Chapter;
 import com.twogathertales.dialogueservice.model.choice.Choice;
+import com.twogathertales.dialogueservice.model.display.Display;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.Set;
@@ -30,4 +31,7 @@ public class Event {
 
     @OneToMany(mappedBy = "event")
     private Set<Choice> events;
+
+    @OneToMany(mappedBy = "event")
+    private Set<Display> displays;
 }
