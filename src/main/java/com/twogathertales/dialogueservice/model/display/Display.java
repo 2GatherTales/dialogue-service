@@ -8,17 +8,16 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 
 @Entity
-@Table(name="displays", schema="avarum_dialogue")
+@Table(name="display", schema="avarum_dialogue")
 @Data
 public class Display {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
-    @ManyToOne
-    @JoinColumn(name="event_id", nullable = false)
-    private Event event;
+    @Column(name = "event_id")
+    private Long event;
 
     @OneToOne
     @JoinColumn(name = "character_id", nullable = false)

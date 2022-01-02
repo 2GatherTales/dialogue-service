@@ -8,14 +8,14 @@ import java.util.Set;
 
 
 @Entity
-@Table(name="chapters", schema="avarum_dialogue")
+@Table(name="chapter", schema="avarum_dialogue")
 @Data
 public class Chapter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Long id;
 
-    @OneToMany(mappedBy = "chapter")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "chapter")
     private Set<Event> events;
 }
